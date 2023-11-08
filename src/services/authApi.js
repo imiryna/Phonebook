@@ -1,4 +1,3 @@
-import axios from "axios";
 import { phonebookInstant } from "./baseURL";
 
 export const userSignup = async formData =>{
