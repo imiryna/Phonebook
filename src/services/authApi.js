@@ -17,8 +17,8 @@ export const userLogin = async formData => {
 };
 
 export const userLogout = async token => {
-  setToken(token);
-  const { data } = await phonebookInstance.post('/users/logout', {});
+  //   setToken(token);
+  const { data } = await phonebookInstance.post('/users/logout');
   return data;
 };
 
