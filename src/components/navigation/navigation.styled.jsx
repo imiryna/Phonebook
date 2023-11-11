@@ -28,7 +28,7 @@ export const NavlinkCss = styled(NavLink)`
   text-transform: uppercase;
   transition: all 250ms;
 
-  &:hover, :active{
+  &:hover, &.active{
     color: rgba(27,163,196,1);
   }
 

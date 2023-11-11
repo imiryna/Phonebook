@@ -1,21 +1,27 @@
-import { phonebookInstant } from "./baseURL";
+import { phonebookInstance } from "./baseURL";
+
+export const setToken = (token) =>{
+    phonebookInstance.defaults.headers.common.Authorization = `Bearer ${token}`;
+}
 
 export const userSignup = async formData =>{
-    const {data} = await phonebookInstant.post('/users/signup', formData);
+    const {data} = await phonebookInstance.post('/users/signup', formData);
+    setToken(data.token);
     return data;
 }
 
 export const userLogin = async formData =>{
-    const {data} = await phonebookInstant.post('/users/login', formData);
+    const {data} = await phonebookInstance.post('/users/login', formData);
+    setToken(data.token);
     return data;
 }
 
 export const userLogout = async () =>{
-    const {data} = await phonebookInstant.post('/users/logout');
+    const {data} = await phonebookInstance.post('/users/logout');
     return data;
 }
 
 export const refreshUser = async () =>{
-    const {data} = await phonebookInstant.get('/users/current');
+    const {data} = await phonebookInstance.get('/users/current');
     return data;
 }

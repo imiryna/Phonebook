@@ -18,9 +18,9 @@ export const loginThunk = createAsyncThunk(
     'auth/register',
     async (formData, thunkAPI) => {
       try {
-        const response = await userSignup(formData);
-        console.log('response: ', response)
-        return response;
+        const authData = await userSignup(formData);
+        console.log('response: ', authData)
+        return authData;
       } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
       }
