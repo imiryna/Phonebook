@@ -22,7 +22,7 @@ export const userLogout = async token => {
   return data;
 };
 
-export const refreshUser = async () => {
+export const currentUser = async () => {
   const { data } = await phonebookInstance.get('/users/current');
   return data;
 };

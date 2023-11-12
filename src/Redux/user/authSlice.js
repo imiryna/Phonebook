@@ -1,5 +1,10 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
-import { loginThunk, logoutThunk, registerThunk } from 'Redux/user/authThunk';
+import {
+  loginThunk,
+  logoutThunk,
+  registerThunk,
+  refreshUserThunk,
+} from 'Redux/user/authThunk';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -39,6 +44,12 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.authenticated = false;
         state.token = null;
+      })
+      .addCase(refreshUserThunk.fulfilled, (state, { payload }) => {
+        state.user = payload.user;
+        state.isLoading = false;
+        state.authenticated = true;
+        state.token = payload.token;
       })
       // .addCase(deleteContactsThunk.fulfilled, (state, { payload }) => {
       //   state.items = state.items.filter(item => item.id !== payload.id);

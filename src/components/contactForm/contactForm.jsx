@@ -18,7 +18,6 @@ export const ContactForm = () => {
     dispatch(getRequestContacts());
   }, [dispatch]);
 
-
   const handleInputContacts = e => {
     switch (e.target.name) {
       case 'userName':
@@ -38,7 +37,7 @@ export const ContactForm = () => {
     ev.preventDefault();
     const newContact = {
       name: userName,
-      phone: number,
+      number: number,
     };
     dispatch(addContactsThunk(newContact));
     reset();

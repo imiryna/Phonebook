@@ -15,9 +15,9 @@ export const ContactList = () => {
   return (
     <div>
       <ContactListCss>
-        {filteredContactList?.map(({ id, name, phone }) => (
+        {filteredContactList?.map(({ id, name, number }) => (
           <Items key={id}>
-            {name}: {phone}
+            {name}: {number}
             <ButtonCss
               type="button"
               onClick={() => dispatch(deleteContactsThunk(id))}
