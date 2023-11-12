@@ -1,6 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Section, NavCss, NavlinkCss } from './navigation.styled';
+import {
+  Section,
+  NavCss,
+  NavlinkCss,
+  LoginBoxCss,
+  UserTextCss,
+  ButtonCss,
+} from './navigation.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   selectAuthenticated,
@@ -30,10 +37,10 @@ const Navigation = () => {
               <NavlinkCss to="/login">Login</NavlinkCss>
             </>
           ) : (
-            <>
-              <button onClick={handleLogout}>Logout</button>
-              <p>Hello, {currentUser.name}</p>
-            </>
+            <LoginBoxCss>
+              <UserTextCss>Hello, {currentUser.name}</UserTextCss>
+              <ButtonCss onClick={handleLogout}>Logout</ButtonCss>
+            </LoginBoxCss>
           )}
         </NavCss>
       </Section>

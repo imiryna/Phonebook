@@ -27,6 +27,7 @@ export const InputCss = styled.input`
   border-radius: 5px;
   font: inherit;
   cursor: pointer;
+  transition: all 250ms;
 
   &:focus {
     outline: none;
@@ -38,7 +39,7 @@ export const LabelCss = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
-  color: rgba(5,25,55,1);
+  color: rgba(5, 25, 55, 1);
   font-size: 20px;
 `;
 
@@ -50,7 +51,12 @@ export const Button = styled.button`
   border: 1px solid transparent;
   color: #cfcaca;
   font-size: 20px;
-  background-image: linear-gradient(31deg, rgba(27,163,196,1) 0%, rgba(5,25,55,1) 41%);
+  background-image: linear-gradient(
+    31deg,
+    rgba(27, 163, 196, 1) 0%,
+    rgba(5, 25, 55, 1) 41%
+  );
+  transition: all 250ms;
 
   &:hover,
   &:focus {

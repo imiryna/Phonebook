@@ -49,7 +49,7 @@ const authSlice = createSlice({
         state.user = payload.user;
         state.isLoading = false;
         state.authenticated = true;
-        state.token = payload.token;
+        // state.token = payload.token;
       })
       // .addCase(deleteContactsThunk.fulfilled, (state, { payload }) => {
       //   state.items = state.items.filter(item => item.id !== payload.id);

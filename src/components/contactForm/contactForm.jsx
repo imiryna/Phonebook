@@ -50,6 +50,7 @@ export const ContactForm = () => {
 
   return (
     <ContactFormCss onSubmit={handleAddContacts}>
+      <p> Add Contact</p>
       <Description>
         Name
         <InputFormCss
