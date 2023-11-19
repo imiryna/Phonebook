@@ -10,6 +10,7 @@ export const Section = styled.div`
 
 export const NavCss = styled.nav`
   display: flex;
+  gap: 24px;
   flex-direction: row;
   align-items: center;
   justify-content: start;
