@@ -18,10 +18,14 @@ export const ContactsPage = () => {
       <Container>
         {error && <p>Whoops, something went wrong: {error}</p>}
         <ContactForm />
-        <Text>Contacts</Text>
-        {contacts && contacts?.length > 0 && <Filter />}
+        {contacts && contacts?.length > 0 && (
+          <>
+            <Text>Contacts</Text>
+            <Filter />
+            <ContactList />
+          </>
+        )}
         {isLoading && <Loader />}
-        <ContactList />
       </Container>
     </>
   );

@@ -13,9 +13,6 @@ export const NavCss = styled.nav`
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  gap: 24px;
-  margin-right: auto;
-  padding: 4px 24px;
 `;
 
 export const NavlinkCss = styled(NavLink)`
@@ -35,7 +32,7 @@ export const NavlinkCss = styled(NavLink)`
 
 export const LoginBoxCss = styled.div`
   display: flex;
-  margin-left: 1140px;
+  /* margin-left: 1140px; */
   flex-direction: row;
   align-items: center;
   justify-content: start;
@@ -51,7 +48,9 @@ export const UserTextCss = styled.p`
   color: rgba(5, 25, 55, 1);
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  white-space: nowrap;
   transition: all 250ms;
+  margin-left: 900px;
 `;
 
 export const ButtonCss = styled.button`
